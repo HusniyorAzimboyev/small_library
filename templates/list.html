@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List</title>
+    <link rel="stylesheet" href="{% static 'css/dashstyle.css'%}">
+    <style>
+        /* Table container for layout and padding */
+.table-container {
+    width: 100%;
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Basic table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+/* Header styling */
+th {
+    background-color: #f2f2f2;
+    color: #333333;
+    padding: 12px;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: left;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+/* Cell styling */
+td {
+    padding: 12px;
+    color: #333333;
+    font-size: 14px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Alternate row color */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Hover effect */
+tr:hover {
+    background-color: #e0e0e0;
+}
+
+/* Responsive table (optional) */
+@media (max-width: 768px) {
+    .table-container {
+        overflow-x: auto;
+    }
+    table {
+        width: 100%;
+    }
+}
+/* Container for all posts */
+.posts {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between each post */
+    padding: 20px;
+}
+
+/* Individual post styling */
+.post {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 300px; /* Adjust width as needed */
+}
+
+/* Hover effect */
+.post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Post title styling */
+.post h1 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+/* Post content styling */
+.post p {
+    font-size: 16px;
+    color: #666666;
+    line-height: 1.6;
+}
+/* Style for the author */
+.post_author {
+    font-size: 14px;
+    font-weight: 600; 
+    text-align: right;
+    color: #4a90e2; 
+    margin-bottom: 8px; 
+    text-transform: uppercase; 
+}
+
+
+.post_published {
+    font-size: 13px;
+    color: #888888; 
+    font-style: italic;
+    margin-top: 10px; 
+    display: block; 
+}
+/* Navbar container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Style for the "Add New" button container */
+.add-button-container {
+    display: flex;
+    justify-content: flex-end; /* Align button to the right */
+    margin-top: 20px; /* Space between navbar and button */
+    margin-bottom: 10px; /* Space between button and table */
+}
+
+/* Style for the "Add New" button */
+.add_butt {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect */
+.add_butt:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Optional: style for the logout link */
+.logout {
+    color: #f44336;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logout:hover {
+    color: #d32f2f;
+}
+
+
+    </style>
+
+</head>
+<body>
+    {%block 'navbar'%}
+    {%endblock%}
+    <div class="add-button-container">
+        <a href="{%block 'butt_url'%}{%endblock%}">
+        <button class="add_butt">Add New</button></a>
+    </div>
+    {%block 'table'%}
+    {%endblock%}
+</body>
+</html>

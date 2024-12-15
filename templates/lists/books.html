@@ -1,0 +1,29 @@
+{% extends '../list.html' %}
+
+{%block 'navbar'%}
+<div class="navbar">
+    <div class="nav-items">
+        <a href="{%url 'main'%}" class="item">Dashboard</a>
+        <a href="{% url 'books_list' %}" class="active">Books</a>
+        <a href="{% url 'students_list' %}" class="item">Students</a>
+        <a href="{% url 'teachers_list' %}" class="item">Teachers</a>
+        <a href="{% url 'posts_list' %}" class="item">Posts</a>
+    </div>
+    <a href="{% url 'logout_page' %}" class="logout">Logout</a>
+</div>
+{% endblock %}
+
+{% block 'butt_url' %}
+{% url 'create_book' %}
+{% endblock %}
+
+{%block 'table'%}
+<div class="table-container">
+    <table border="2">
+        <tr><th>Name</th><th>Author</th><th>Description</th></tr>
+        {% for book in books %}
+        <tr><td>{{book.name}}</td><td>{{book.author}}</td><td>{{book.description}}</td></tr>
+        {% endfor %}
+    </table>
+    </div>
+{% endblock %}
