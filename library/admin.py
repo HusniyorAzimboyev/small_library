@@ -7,4 +7,4 @@ class Choice(admin.ModelAdmin):
     list_filter = ("gender",)
     search_fields = ("name",)
 
-admin.site.register([Book,Post,Teacher,Student,Dummy,User])
+admin.site.register([Book,Post,Teacher,Student,Dummy,MyUser])

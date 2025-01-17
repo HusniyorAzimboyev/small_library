@@ -12,7 +12,7 @@ def book_count(do=None):
     return (Book.objects.all()).count()
 def student_count():
     cursor = connection.cursor()
-    cursor.execute("select * from library_student order by 'id' desc;")
+    cursor.execute("select * from library_student;")
     answer = data_fetchall(cursor)
     return len(answer)
 def teacher_count():

@@ -63,7 +63,7 @@ class Dummy(models.Model):
     name=models.CharField(max_length=100)
     picture = models.ImageField(upload_to='images/')
 
-class User(models.Model):
+class MyUser(models.Model):
     name = models.CharField(max_length=150)
     surname = models.CharField(max_length=100)
     image = models.ImageField(upload_to="images/")
