@@ -11,6 +11,12 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 import os.path
 from pathlib import Path
+from dotenv import load_dotenv
+import dj_database_url
+load_dotenv()
+
+ENVIRONMENT = os.getenv("ENVIRONMENT")
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,12 +26,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-l3poa=5=pr1o8dblm*%&f9ml$92%ww80ujb56yv-y(effof(4p'
+SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+if ENVIRONMENT!="development":
+    DEBUG=False
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["azimboyev.uz","www.azimboyev.uz","localhost","127.0.0.1"]
 
 
 # Application definition
@@ -37,6 +45,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'dj_database_url',
+
     'library',
 ]
 
@@ -91,6 +102,9 @@ DATABASES = {
     }
 }
 
+POSTGRES_LOCALLY = True
+if POSTGRES_LOCALLY==True or ENVIRONMENT!="development":
+    DATABASES["default"]=dj_database_url.parse(os.getenv("DATABASE_URL"))
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators

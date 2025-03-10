@@ -4,7 +4,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('adminjon/', admin.site.urls),
     path('', include("library.urls"),name="library"),
 ]
 if settings.DEBUG:
