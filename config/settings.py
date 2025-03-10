@@ -81,6 +81,8 @@ TEMPLATES = [
 CSRF_TRUSTED_ORIGINS = [
     "http://*","http://*",  # Replace with your specific ngrok URL
 ]
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
