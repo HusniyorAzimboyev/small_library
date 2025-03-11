@@ -33,7 +33,7 @@ DEBUG = True
 if ENVIRONMENT!="development":
     DEBUG=False
 
-ALLOWED_HOSTS = ["azimboyev.uz","www.azimboyev.uz","localhost","127.0.0.1"]
+ALLOWED_HOSTS = ["books.azimboyev.uz","www.books.azimboyev.uz","localhost","127.0.0.1"]
 
 
 # Application definition
