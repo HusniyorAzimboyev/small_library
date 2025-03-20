@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <title>create Book</title>
+    <link rel="stylesheet" href="{% static 'css/create.css'%}">
 </head>
 <body>
     <p class="header">{{header}}</p>
-    <form method="POST">
+    <form method="POST" class="myform">
         {% csrf_token %}
         {{form.as_p}}
         <button type="submit">Submit</button>
     </form>
 </body>
-</html>
+</html> 

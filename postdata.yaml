@@ -1,0 +1,89 @@
+- model: library.post
+  pk: 1
+  fields:
+    title: "Wisdom of Time"
+    author: "Socrates"
+    slug: "wisdom-of-time"
+    content: "The only true wisdom is in knowing you know nothing."
+    published: "2024-03-11T12:00:00Z"
+
+- model: library.post
+  pk: 2
+  fields:
+    title: "The Strength of Patience"
+    author: "Confucius"
+    slug: "strength-of-patience"
+    content: "It does not matter how slowly you go as long as you do not stop."
+    published: "2024-03-10T15:30:00Z"
+
+- model: library.post
+  pk: 3
+  fields:
+    title: "The Power of Words"
+    author: "Plato"
+    slug: "power-of-words"
+    content: "Wise men speak because they have something to say; fools because they have to say something."
+    published: "2024-03-09T08:45:00Z"
+
+- model: library.post
+  pk: 4
+  fields:
+    title: "Life’s Greatest Teacher"
+    author: "Albert Einstein"
+    slug: "lifes-greatest-teacher"
+    content: "A person who never made a mistake never tried anything new."
+    published: "2024-03-08T20:15:00Z"
+
+- model: library.post
+  pk: 5
+  fields:
+    title: "The Value of Time"
+    author: "Benjamin Franklin"
+    slug: "value-of-time"
+    content: "Lost time is never found again."
+    published: "2024-03-07T10:00:00Z"
+
+- model: library.post
+  pk: 6
+  fields:
+    title: "Happiness and Simplicity"
+    author: "Leo Tolstoy"
+    slug: "happiness-and-simplicity"
+    content: "If you want to be happy, be."
+    published: "2024-03-06T18:40:00Z"
+
+- model: library.post
+  pk: 7
+  fields:
+    title: "True Wealth"
+    author: "Epictetus"
+    slug: "true-wealth"
+    content: "Wealth consists not in having great possessions, but in having few wants."
+    published: "2024-03-05T09:25:00Z"
+
+- model: library.post
+  pk: 8
+  fields:
+    title: "The Power of Kindness"
+    author: "Mark Twain"
+    slug: "power-of-kindness"
+    content: "Kindness is the language which the deaf can hear and the blind can see."
+    published: "2024-03-04T14:10:00Z"
+
+- model: library.post
+  pk: 9
+  fields:
+    title: "Success and Failure"
+    author: "Winston Churchill"
+    slug: "success-and-failure"
+    content: "Success is not final, failure is not fatal: it is the courage to continue that counts."
+    published: "2024-03-03T07:55:00Z"
+
+- model: library.post
+  pk: 10
+  fields:
+    title: "The Key to Change"
+    author: "Mahatma Gandhi"
+    slug: "key-to-change"
+    content: "Be the change that you wish to see in the world."
+    published: "2024-03-02T22:30:00Z"

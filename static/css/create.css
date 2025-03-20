@@ -1,0 +1,20 @@
+*{
+    display:inline;
+}
+
+body{
+    text-align:center;
+    justify-content:center;
+    align-items:center;
+    background-image:"https://pin.it/7seAA9Zwv";
+}
+.myform{
+    display:grid;
+    margin:auto;
+    opacity:1;
+    width:500px;
+    filter:blur(100);
+}
+ul{
+    list-style-type:none;
+}
